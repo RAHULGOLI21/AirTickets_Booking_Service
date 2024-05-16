@@ -1,10 +1,4 @@
-Project Setup
-
- npx sequelize model:generate --name Booking --attributes flightId:integer,userId:integer,status:enum
- npx sequelize db:migrate
- npx sequelize migration:create --name modify_bookings_add_new_fields
-
- Welcome to Auth_Service
+ Welcome to BOOKING_SERVICE
 
 Project Setup
 
@@ -25,6 +19,9 @@ Clone the project on your local Execute npm install on the same path as of your 
 Once you've added your db config as listed above, go to the src folder from your terminal and execute 
 ```npx sequelize db:create``` to create ```BOOKING_DEV_DB``` the and then execute ```npx sequelize db:migrate``` for migrating/creating the tables for the models below in ```BOOKING_DEV_DB```
 
+
+Command to create a new migrtaion file to modify the table
+``` npx sequelize migration:create --name modify_bookings_add_new_fields```
 ### TABLES
 
 BOOKINGS Table
