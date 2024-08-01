@@ -2,7 +2,7 @@
 
 Project Setup
 
-Clone the project on your local Execute npm install on the same path as of your root directory of teh downloaded project Create a .env file in the root directory and add the following environment variable ```PORT=3002```  , ```DB_SYNC=false/true ``` , ```FLIGHT_SERVICE_URL=http://localhost:30001```, ```MESSAGE_BROKER_URL = 'amqp://localhost'``` , ```REMINDER_EXCHANGE_NAME=AIRLINE_BOOKING```,```REMINDER_BINDING_KEY=REMINDER_SERVICE``` accordingly. Inside the src/config folder create a new file config.json and then add the following piece of json
+Clone the project on your local Execute npm install on the same path as of your root directory of teh downloaded project Create a .env file in the root directory and add the following environment variable ```PORT=3002```  , ```DB_SYNC=false/true ``` , ```FLIGHT_SERVICE_URL=http://localhost:3001```, ```MESSAGE_BROKER_URL = 'amqp://localhost'``` , ```REMINDER_EXCHANGE_NAME=AIRLINE_BOOKING```,```REMINDER_BINDING_KEY=REMINDER_SERVICE``` accordingly. Inside the src/config folder create a new file config.json and then add the following piece of json
 
 ```
 {

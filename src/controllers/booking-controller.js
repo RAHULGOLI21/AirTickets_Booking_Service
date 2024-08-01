@@ -8,12 +8,23 @@ class BookingController {
 
     async sendMessageToQueue(req,res){
         const channel = await createChannel();
-        const data = 'Success';
-        publishMessage(channel, REMINDER_BINDING_KEY,JSON.stringify(data));
+        const payload = {  
+            data:{
+                subject: ' This ticket is created from the queue',
+                content: ' This is a queue logic example',
+                recepientEmail: 'golirahul21@gmail.com',
+                notificationTime: ' 2024-05-24 11:49:00',
+            },
+            service: 'CREATE_TICKET'
+            // The service name can be  SMS_SERVICE , EMAIL_SERVICE etc 
+            // i.e from booking service we are passing the "service" type to the notificationService
+            // so that in notificationService the respective service can subscribe the message.
+        };
+        publishMessage(channel, REMINDER_BINDING_KEY,JSON.stringify(payload));
         return res.status(200).json({
             success: true,
             err:{},
-            data : {},
+            data : {}, 
             message: 'Published Message Successfully'
         })
     }
